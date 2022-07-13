@@ -1,0 +1,60 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62, 5%;
+}
+body {
+  font-family: "Roboto", sans-serif;
+}
+.bg-navbar {
+  background-color: #171010;
+}
+.img-logo {
+  width: 60px;
+  height: 70px;
+}
+
+.row {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+.card-title {
+  font-weight: bold;
+  font-size: 25px;
+}
+.precio {
+  font-weight: bold;
+  font-size: 20px;
+}
+
+footer {
+  background-color: #171010;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.img-footer{
+  margin: 10px;
+  width: 60px;
+  height: 70px;
+}
+footer .lista-footer ul a img {
+  width: 50px;
+  height: 50px;
+}
+
+footer .logo-footer {
+  width: auto;
+  height: 100px;
+}
+footer .lista-footer ul a img {
+  transition: 2s;
+  margin: 20px;
+}
+footer .lista-footer ul a img:hover {
+  transform: scale(1.5);
+}

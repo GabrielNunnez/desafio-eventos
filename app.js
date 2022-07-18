@@ -55,7 +55,7 @@ array.push({
 });
 
 console.log(array);
-const filtrado = tiendaCuchillo.find((Tipo) => Tipo === "asado");
+const filtrado = array.find(producto => producto.Tipo === "asado");
 console.log(filtrado);
 
 const carrito = [

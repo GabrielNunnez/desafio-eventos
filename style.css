@@ -30,6 +30,10 @@ body {
   font-weight: bold;
   font-size: 20px;
 }
+.card-carrito{
+  display: flex;
+  justify-content: space-around;
+}
 
 footer {
   background-color: #171010;

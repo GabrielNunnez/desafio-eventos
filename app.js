@@ -1,14 +1,13 @@
-
 const carrito = document.querySelector("#carrito");
 const contenedorCarrito = document.querySelector("#lista-carrito tbody");
 const vaciarCarritoBtn = document.querySelector("#vaciar-carrito");
-const listaCursos = document.querySelector("#lista-productos");
+const listaProductos = document.querySelector("#lista-productos");
 let articulosCarrito = [];
 
 cargarEventListeners();
 
 function cargarEventListeners() {
-  listaCursos.addEventListener("click", agregarProducto);
+  listaProductos.addEventListener("click", agregarProducto);
 
   carrito.addEventListener("click", eliminarProducto);
 
@@ -23,20 +22,22 @@ function agregarProducto(e) {
 
   if (e.target.classList.contains("agregar-carrito")) {
     const productoSeleccionado = e.target.parentElement;
-    leerDatosCurso(productoSeleccionado);
+    leerDatosProducto(productoSeleccionado);
   }
 }
 
 function eliminarProducto(e) {
   e.preventDefault();
   if (e.target.classList.contains("borrar-producto")) {
-    const cursoID = e.target.getAttribute("id");
-    articulosCarrito = articulosCarrito.filter((producto) => producto.id !== productoID);
+    const productoID = e.target.getAttribute("id");
+    articulosCarrito = articulosCarrito.filter(
+      (producto) => producto.id !== productoID
+    );
 
     carritoHTML();
   }
 }
-function leerDatosCurso(producto) {
+function leerDatosProducto(producto) {
   const infoProducto = {
     imagen: producto.querySelector("img").src,
     titulo: producto.querySelector(".card-title").innerText,
@@ -44,11 +45,13 @@ function leerDatosCurso(producto) {
     id: producto.querySelector("a").getAttribute("id"),
     cantidad: 1,
   };
-  const existe = articulosCarrito.some((producto) => producto.id === infoProducto.id);
+  const existe = articulosCarrito.some(
+    (producto) => producto.id === infoProducto.id
+  );
   if (existe) {
     const producto = articulosCarrito.map((producto) => {
-      if (curso.id === infoProducto.id) {
-        curso.cantidad++;
+      if (producto.id === infoProducto.id) {
+        producto.cantidad++;
         return producto;
       } else {
         return producto;
@@ -61,7 +64,6 @@ function leerDatosCurso(producto) {
   carritoHTML();
 }
 function carritoHTML() {
-
   limpiarHTML();
   articulosCarrito.forEach((producto) => {
     const row = document.createElement("tr");

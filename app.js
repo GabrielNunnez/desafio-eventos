@@ -1,3 +1,4 @@
+const carrito = document.querySelector("#carrito");
 const contenedorCarrito = document.querySelector("#lista-carrito tbody");
 const vaciarCarritoBtn = document.querySelector("#vaciar-carrito");
 const listaProductos = document.querySelector("#lista-productos");
@@ -72,12 +73,13 @@ function carritoHTML() {
     <td>
     <a href="" class="borrar-producto" id="${producto.id}">x</a>
     </td>`;
+    contenedorCarrito.appendChild(row);
   });
 }
 function limpiarHTML() {
   contenedorCarrito.innerHTML = "";
 }
-const guardarCarrito = contenedorCarrito;
+const guardarCarrito = contenedorCarrito
 const enJSON = JSON.stringify(contenedorCarrito);
 localStorage.setItem("guardarCarrito", enJSON);
 // operador and

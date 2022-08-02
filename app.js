@@ -79,8 +79,8 @@ function carritoHTML() {
 function limpiarHTML() {
   contenedorCarrito.innerHTML = "";
 }
-const guardarCarrito = contenedorCarrito
-const enJSON = JSON.stringify(contenedorCarrito);
+const guardarCarrito = articulosCarrito;
+const enJSON = JSON.stringify(articulosCarrito);
 localStorage.setItem("guardarCarrito", enJSON);
 // operador and
 const carritoVacio = [];
@@ -93,5 +93,94 @@ const itemsTienda = [
   "id:4, producto: Cuchillos Artesanales Trenzado Alpaca Cincelado, precio: 3.500",
   "id:5, producto: Juego Asador Kit Asado Set Parrillero X5 Pala Atizado Combo, precio: 5.500",
 ];
-const [a] = itemsTienda
-console.log(a)
+const [a] = itemsTienda;
+console.log(a);
+const button = document.querySelector("#btn-alert");
+button.addEventListener("click", () => {
+  swal("Desea finalizar la compra?", {
+    buttons: ["Seguir comprando", "Si"],
+    position: `center`,
+  
+  });
+});
+
+const buttonCancelar = document.querySelector("#vaciar-carrito");
+buttonCancelar.addEventListener("click", () => {
+  swal({
+    position: `center`,
+    title: "Quiere cancelar la compra?",
+    text: "se eliminaran todos los articulos seleccionados",
+    icon: "warning",
+    buttons: true,
+    dangerMode: true,
+  }).then((willDelete) => {
+    if (willDelete) {
+      swal("Se vacio el carrito", {
+        icon: "success",
+      });
+    } else {
+      swal("Se guradaron sus articulos selecionados");
+    }
+  });
+});
+
+const btnToastify = document.querySelector("#uno", "#dos")
+btnToastify.addEventListener("click", ()=> {
+  Toastify({
+    text: "Agregaste un producto al carrito",
+    className: "info",
+    gravity: "center",
+    position:"left",
+    style: {
+      background: "grey",
+    }
+  }).showToast();
+})
+const btnToastify2 = document.querySelector("#dos")
+btnToastify2.addEventListener("click", ()=> {
+  Toastify({
+    text: "Agregaste un producto al carrito",
+    className: "info",
+    gravity: "center",
+    position:"left",
+    style: {
+      background: "grey",
+    }
+  }).showToast();
+})
+const btnToastify3 = document.querySelector("#tres")
+btnToastify3.addEventListener("click", ()=> {
+  Toastify({
+    text: "Agregaste un producto al carrito",
+    className: "info",
+    gravity: "center",
+    position:"left",
+    style: {
+      background: "grey",
+    }
+  }).showToast();
+})
+const btnToastify4 = document.querySelector("#cuatro")
+btnToastify4.addEventListener("click", ()=> {
+  Toastify({
+    text: "Agregaste un producto al carrito",
+    className: "info",
+    gravity: "center",
+    position:"left",
+    style: {
+      background: "grey",
+    }
+  }).showToast();
+})
+const btnToastify5 = document.querySelector("#cinco")
+btnToastify5.addEventListener("click", ()=> {
+  Toastify({
+    text: "Agregaste un producto al carrito",
+    className: "info",
+    gravity: "center",
+    position:"left",
+    style: {
+      background: "grey",
+    }
+  }).showToast();
+})

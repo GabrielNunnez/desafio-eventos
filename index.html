@@ -15,8 +15,11 @@
       crossorigin="anonymous"
     />
     <link rel="stylesheet" href="style.css" />
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
   </head>
   <body>
+    
     <nav class="navbar navbar-expand-xl navbar-dark bg-navbar">
       <div class="container-fluid">
         <img
@@ -66,7 +69,6 @@
     <div class="encabezado">
       <h1 id="titulo">Selecciona tus Productos</h1>
     </div>
-
     <div class="container">
       <div id="lista-productos">
         <div class="row">
@@ -87,7 +89,7 @@
               </p>
               <h6 class="precio">$<span>5.476</span></h6>
             </div>
-            <a href="#" class="btn agregar-carrito" id="1">Comprar</a>
+            <a href="#" class="btn agregar-carrito" id="uno">Comprar</a>
           </div>
           <div class="card" style="width: 18rem">
             <img
@@ -106,7 +108,7 @@
               </p>
               <h6 class="precio">$<span>7.000</span></h6>
             </div>
-            <a href="#" class="btn agregar-carrito" id="2">Comprar</a>
+            <a href="#" class="btn agregar-carrito" id="dos">Comprar</a>
           </div>
           <div class="card" style="width: 18rem">
             <img
@@ -127,7 +129,7 @@
               </p>
               <h6 class="precio">$<span>6.000</span></h6>
             </div>
-            <a href="#" class="btn agregar-carrito" id="3">Comprar</a>
+            <a href="#" class="btn agregar-carrito" id="tres">Comprar</a>
           </div>
           <div class="card" style="width: 18rem">
             <img src="./imagenes/img-4.jpg" class="card-img-top" alt="..." />
@@ -142,7 +144,7 @@
               </p>
               <h6 class="precio">$<span>3.500</span></h6>
             </div>
-            <a href="#" class="btn agregar-carrito" id="4">Comprar</a>
+            <a href="#" class="btn agregar-carrito" id="cuatro">Comprar</a>
           </div>
           <div class="card" style="width: 18rem">
             <img src="./imagenes/set-asado.jpg" class="card-img-top" alt="..." />
@@ -157,7 +159,7 @@
               </p>
               <h6 class="precio">$<span>5.500</span></h6>
             </div>
-            <a href="#" class="btn agregar-carrito" id="5">Comprar</a>
+            <a href="#" class="btn agregar-carrito" id="cinco">Comprar</a>
           </div>
         </div>
       </div>
@@ -205,8 +207,8 @@
               <button
                 type="button"
                 class="btn btn-outline-success"
-                id="vaciar-carrito"
-              ><a href="/carrito.html"></a>Confirmar Compra
+                id="btn-alert"
+              >Confirmar Compra
               </button>
             </div>
           </div>
@@ -234,5 +236,8 @@
       integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
       crossorigin="anonymous"
     ></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+    
   </body>
 </html>
